@@ -12,6 +12,5 @@ Feature: Verification of OI Shopping List for android App
 
  	@Regression
  	Scenario: Creation of lists & sort the list and validate the sorting of the list items
- 		Given open the shopping list app in mobile device
-    Then click on hamburger icon
-    And create new shopping list and sort the list items
+    Then create new shopping list and sort the list items
+    And sort the items in the shopping list

@@ -60,42 +60,42 @@ formatter.match({
   "location": "Test.open_the_shopping_list_app_in_mobile_device()"
 });
 formatter.result({
-  "duration": 17405159248,
+  "duration": 35930076005,
   "status": "passed"
 });
 formatter.match({
   "location": "Test.click_on_hamburger_icon()"
 });
 formatter.result({
-  "duration": 704680833,
+  "duration": 700713351,
   "status": "passed"
 });
 formatter.match({
   "location": "Test.Enter_name_of_new_shopping_list()"
 });
 formatter.result({
-  "duration": 2362332403,
+  "duration": 2799883676,
   "status": "passed"
 });
 formatter.match({
   "location": "Test.click_on_OK_button()"
 });
 formatter.result({
-  "duration": 619845715,
+  "duration": 593640122,
   "status": "passed"
 });
 formatter.match({
   "location": "Test.Add_new_item_to_shopping_Lists()"
 });
 formatter.result({
-  "duration": 11693737909,
+  "duration": 13355018977,
   "status": "passed"
 });
 formatter.match({
   "location": "Test.delete_item_from_the_list()"
 });
 formatter.result({
-  "duration": 6930240289,
+  "duration": 8523884126,
   "status": "passed"
 });
 formatter.scenario({
@@ -114,38 +114,26 @@ formatter.scenario({
 });
 formatter.step({
   "line": 15,
-  "name": "open the shopping list app in mobile device",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 16,
-  "name": "click on hamburger icon",
+  "name": "create new shopping list and sort the list items",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 17,
-  "name": "create new shopping list and sort the list items",
+  "line": 16,
+  "name": "sort the items in the shopping list",
   "keyword": "And "
-});
-formatter.match({
-  "location": "Test.open_the_shopping_list_app_in_mobile_device()"
-});
-formatter.result({
-  "duration": 12765204099,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test.click_on_hamburger_icon()"
-});
-formatter.result({
-  "duration": 722580481,
-  "status": "passed"
 });
 formatter.match({
   "location": "Test.create_new_shopping_list_and_sort_the_list_items()"
 });
 formatter.result({
-  "duration": 11723111553,
+  "duration": 9182434136,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test.sort_the_items_in_the_shopping_list()"
+});
+formatter.result({
+  "duration": 9096389665,
   "status": "passed"
 });
 });

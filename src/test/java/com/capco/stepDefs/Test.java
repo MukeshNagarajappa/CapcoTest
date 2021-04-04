@@ -44,8 +44,7 @@ public class Test {
 	@Then("^click on hamburger icon$")
 	public void click_on_hamburger_icon() throws Throwable {
 		
-		driver.findElement(By.xpath("//android.widget.FrameLayout//android.widget.LinearLayout//android.widget.FrameLayout//android.view.ViewGroup//android.widget.FrameLayout[1]//"
-				+ "android.view.ViewGroup//android.widget.ImageButton[@index=0]")).click();
+		driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
 		System.out.println("Clicked on Hamburger Menu");
 	}
 
@@ -124,47 +123,48 @@ public class Test {
 				+ "android.view.ViewGroup//android.widget.ImageButton[@index=0]")).click();
 	}
 	
-	@And("^create new shopping list and sort the list items$")
+	@Then("^create new shopping list and sort the list items$")
 	public void create_new_shopping_list_and_sort_the_list_items() throws Throwable {
 		
-		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/"
-				+ "android.support.v4.widget.DrawerLayout/android.widget.ListView/android.widget.RelativeLayout[3]/android.widget.TextView[@index=1]")).click();
+		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.support.v4.widget.DrawerLayout/android.widget.ListView"
+				+ "/android.widget.FrameLayout[2][@index=4]")).click();
 		Log.info("Clicked on New List tab");
 		
-	    driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/"
-	    		+ "android.widget.LinearLayout/android.widget.EditText[@index=0]")).sendKeys("Myntra");
-	    driver.findElement(By.id("android:id/button1")).click();
+		driver.findElement(By.id("org.openintents.shopping:id/autocomplete_add_item")).sendKeys("Myntra");
+		driver.findElement(By.id("org.openintents.shopping:id/button_add_item")).click();
+		
+		driver.findElement(By.id("org.openintents.shopping:id/autocomplete_add_item")).sendKeys("Flipkart");
+		driver.findElement(By.id("org.openintents.shopping:id/button_add_item")).click();
+		
+		driver.findElement(By.id("org.openintents.shopping:id/autocomplete_add_item")).sendKeys("Amazon");
+		driver.findElement(By.id("org.openintents.shopping:id/button_add_item")).click();
+		
+		driver.findElement(By.id("org.openintents.shopping:id/autocomplete_add_item")).sendKeys("PayTM");
+		driver.findElement(By.id("org.openintents.shopping:id/button_add_item")).click();
+	}
+		
+	@Then("^sort the items in the shopping list$")
+	public void sort_the_items_in_the_shopping_list() throws Throwable {	
+		
+	    driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='More options']")).click();
 	    
-	    driver.findElement(By.xpath("//android.widget.FrameLayout//android.widget.LinearLayout//android.widget.FrameLayout//android.view.ViewGroup//android.widget.FrameLayout[1]//"
-				+ "android.view.ViewGroup//android.widget.ImageButton[@index=0]")).click();
+	    driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView"
+	    		+ "/android.widget.LinearLayout[2][@index=1]")).click();
+	    
+	    driver.findElement(By.xpath("//android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView"
+	    		+ "/android.widget.LinearLayout[2][@index=2]")).click();
+	    
+	    driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]"
+	    		+ "/android.widget.ListView/android.widget.CheckedTextView[2]")).click();
+
+	    driver.navigate().back();
+	    
+	    driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Open navigation drawer']")).click();
 		System.out.println("Clicked on Hamburger Menu");
 		
-		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/"
-				+ "android.support.v4.widget.DrawerLayout/android.widget.ListView/android.widget.RelativeLayout[3]/android.widget.TextView[@index=1]")).click();
-		Log.info("Clicked on New List tab");
-	    
-	    driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/"
-	    		+ "android.widget.LinearLayout/android.widget.EditText[@index=0]")).sendKeys("Amazon");
-	    driver.findElement(By.id("android:id/button1")).click();
-	    
-	    driver.findElement(By.xpath("//android.widget.FrameLayout//android.widget.LinearLayout//android.widget.FrameLayout//android.view.ViewGroup//android.widget.FrameLayout[1]//"
-				+ "android.view.ViewGroup//android.widget.ImageButton[@index=0]")).click();
-		System.out.println("Clicked on Hamburger Menu");
-		
-		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/"
-				+ "android.support.v4.widget.DrawerLayout/android.widget.ListView/android.widget.RelativeLayout[3]/android.widget.TextView[@index=1]")).click();
-		Log.info("Clicked on New List tab");
-		
-		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/"
-	    		+ "android.widget.LinearLayout/android.widget.EditText[@index=0]")).sendKeys("Flipkart");
-	    driver.findElement(By.id("android:id/button1")).click();
-		
-		driver.findElement(By.xpath("//android.widget.FrameLayout//android.widget.LinearLayout//android.widget.FrameLayout//android.view.ViewGroup//android.widget.FrameLayout[1]//"
-				+ "android.view.ViewGroup//android.widget.ImageButton[@index=0]")).click();
-		System.out.println("Clicked on Hamburger Menu");
-	    
-	    
-	    
+		driver.findElement(By.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.support.v4.widget.DrawerLayout"
+				+ "/android.widget.ListView/android.widget.FrameLayout[2]/android.widget.TextView[@index=0]")).click();
+	   
 	    
 	}
 }
